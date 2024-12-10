@@ -1,50 +1,57 @@
-# React + TypeScript + Vite
+# Sistema de Promoções e Checkout
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um sistema moderno de e-commerce focado em promoções, desenvolvido com React e TypeScript, oferecendo uma experiência fluida de compra.
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18.3
+- TypeScript
+- Tailwind CSS
+- Vite
+- Lucide React (ícones)
 
-## Expanding the ESLint configuration
+## ✨ Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Catálogo de Produtos
+- Exibição de produtos com preços originais e promocionais
+- Badges indicativas de promoções ativas
+- Sistema de estoque integrado
 
-- Configure the top-level `parserOptions` property like this:
+### Carrinho de Compras
+- Adição/remoção de produtos
+- Cálculo automático de subtotal
+- Sistema de cupons de desconto
+- Cálculo de frete com base no CEP
+- Frete grátis para compras acima de R$ 299
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Checkout em 3 Etapas
+1. **Dados Pessoais**
+   - Formulário de informações do cliente
+   - Endereço de entrega
+   - Validação de campos
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. **Pagamento**
+   - Múltiplas formas de pagamento
+   - Cartão de crédito com parcelamento
+   - PIX
+   - Boleto
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3. **Revisão**
+   - Resumo do pedido
+   - Valores e descontos
+   - Confirmação da compra
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 🚀 Como Executar
+
+```bash
+# Clone o repositório
+git clone https://github.com/marcos-lima-dev/promocoes-ativas.git
+
+# Entre na pasta do projeto
+cd promocoes-ativas
+
+# Instale as dependências
+npm install
+
+# Execute o projeto
+npm run dev
