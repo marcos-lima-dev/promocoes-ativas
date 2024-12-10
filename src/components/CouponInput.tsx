@@ -1,6 +1,6 @@
 // src/components/CouponInput.tsx
 import { useState } from 'react';
-import { Check, X } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';  
 
 interface CouponInputProps {
   onApplyCoupon: (code: string) => void;
